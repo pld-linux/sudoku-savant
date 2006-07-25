@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/sudoku-savant/%{name}-%{version}.tar.bz2
 # Source0-md5:	12b4582a8645039e72254db26fdf8aa6
 Source1:	%{name}.png
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-types.patch
 URL:		http://gnomefiles.org/app.php?soft_id=1519
 BuildRequires:	gtk+2-devel >= 2.4
 BuildRequires:	pkgconfig
@@ -24,6 +25,7 @@ Prosta graficzna aplikacja do rozwi±zywania i tworzenia pluzzli Sudoku.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 sed -i "s/\tdesktop-file-install/#\tdesktop-file-install/g" Makefile.am
 
