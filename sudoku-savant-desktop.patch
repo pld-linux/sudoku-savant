@@ -1,0 +1,16 @@
+--- sudoku-savant-1.1.orig/sudoku-savant.desktop.in	2006-07-11 01:46:09.000000000 +0200
++++ sudoku-savant-1.1/sudoku-savant.desktop.in	2006-07-25 03:25:56.844731750 +0200
+@@ -2,8 +2,11 @@
+ Type=Application
+ Encoding=UTF-8
+ Name=Sudoku Savant
++Comment=Generate and solve Sudoku puzzles
++Comment[pl]=Twórz i rozwiązuj puzzle Sudoku
+ Version=@VERSION@
+ Exec=sudoku-savant
++Icon=sudoku-savant.png
+ Terminal=false
+-Categories=GNOME;GTK;Application;Game;
+-Comment=Generate and solve Sudoku puzzles
++Categories=GTK;Game;BoardGame;
++# vi: encoding=utf-8
