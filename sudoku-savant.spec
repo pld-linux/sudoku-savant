@@ -1,5 +1,5 @@
 Summary:	Application to solve and generate Sudoku puzzles
-Summary(pl):	Program do rozwi±zywania i tworzenia uk³adanek Sudoku
+Summary(pl.UTF-8):   Program do rozwiÄ…zywania i tworzenia ukÅ‚adanek Sudoku
 Name:		sudoku-savant
 Version:	1.1
 Release:	1
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A simple GUI-driven application to solve and generate Sudoku puzzles
 through logical means.
 
-%description -l pl
-Prosta graficzna aplikacja do rozwi±zywania i tworzenia uk³adanek
+%description -l pl.UTF-8
+Prosta graficzna aplikacja do rozwiÄ…zywania i tworzenia ukÅ‚adanek
 Sudoku.
 
 %prep
