@@ -1,5 +1,5 @@
 Summary:	Application to solve and generate Sudoku puzzles
-Summary(pl.UTF-8):   Program do rozwiązywania i tworzenia układanek Sudoku
+Summary(pl.UTF-8):	Program do rozwiązywania i tworzenia układanek Sudoku
 Name:		sudoku-savant
 Version:	1.1
 Release:	1
