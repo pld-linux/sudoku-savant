@@ -1,12 +1,12 @@
 Summary:	Application to solve and generate Sudoku puzzles
 Summary(pl.UTF-8):	Program do rozwiązywania i tworzenia układanek Sudoku
 Name:		sudoku-savant
-Version:	1.1
+Version:	1.2.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/sudoku-savant/%{name}-%{version}.tar.bz2
-# Source0-md5:	12b4582a8645039e72254db26fdf8aa6
+# Source0-md5:	f229350286ae587bd7e8008dd08439aa
 Source1:	%{name}.png
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-types.patch
@@ -36,6 +36,7 @@ sed -i "s/\tdesktop-file-install/#\tdesktop-file-install/g" Makefile.am
 %{__autoconf}
 %{__automake}
 %configure
+sed -i 's/-frepo//' src/Makefile
 %{__make}
 
 %install
@@ -48,10 +49,12 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 install %{name}.desktop $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*

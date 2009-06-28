@@ -3,8 +3,8 @@
 @@ -58,6 +58,7 @@
      public:
        Note();
-       bool hasMark(Note::size_type i) const { return (m_mark[i] != 0); } 
-+      bool hasMark(const Square&, size_type) const;
-       bool hasMarks() const { return (m_marks != 0); }
+       bool __attribute__((pure)) hasMark(Note::size_type i) const { return (m_mark[i] != 0); } 
++      bool __attribute__((pure)) hasMark(const Square&, size_type) const;
+       bool __attribute__((pure)) hasMarks() const { return (m_marks != 0); }
        bool setMark(size_type, unsigned);
        bool clearMark(size_type);
