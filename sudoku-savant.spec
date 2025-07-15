@@ -26,8 +26,8 @@ Sudoku.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 sed -i "s/\tdesktop-file-install/#\tdesktop-file-install/g" Makefile.am
 
